@@ -15,6 +15,9 @@ admin.initializeApp({
     databaseURL: process.env.DB_FIRE
 });
 
+app.get('/', (req, res) => {
+   res.send('Hello')
+})
 
 const MongoClient = require('mongodb').MongoClient;
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.u16ta.mongodb.net/BurjAlArab?retryWrites=true&w=majority`;
